@@ -8,6 +8,6 @@ class PrincipalController extends Controller
 {
     public function index()
     {
-        echo 'Olá seja bem-vindo ao Laravel';
+        return view('site.home');
     }
 }

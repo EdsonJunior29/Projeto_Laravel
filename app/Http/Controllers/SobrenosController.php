@@ -8,6 +8,6 @@ class SobrenosController extends Controller
 {
     public function index()
     {
-        echo 'sobre nós';
+        return view('site.sobre-nos');
     }
 }
