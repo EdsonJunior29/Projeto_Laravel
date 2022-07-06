@@ -21,3 +21,13 @@ Route::get('/', [PrincipalController::class, 'index']);
 Route::get('/sobre-nos', [SobrenosController::class, 'index']);
 
 Route::get('/contato', [ContatoController::class, 'index']);
+
+//recebendo 1 parametro via URL
+Route::get('/contato/{nome}', function (string $nome) {
+    echo 'Chegamos aqui....'. $nome;
+});
+
+//recebendo 2 parametro via URL
+Route::get('/contato/{nome}/{sobrenome}', function (string $nome, string $sobrenome) {
+    echo 'Chegamos aqui....'. $nome . $sobrenome;
+});
