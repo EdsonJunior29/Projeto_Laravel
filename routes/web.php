@@ -22,12 +22,19 @@ Route::get('/sobre-nos', [SobrenosController::class, 'index']);
 
 Route::get('/contato', [ContatoController::class, 'index']);
 
-//recebendo 1 parametro via URL
-Route::get('/contato/{nome}', function (string $nome) {
-    echo 'Chegamos aqui....'. $nome;
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (string $nome, string $categoria, string $assunto, string $mensagem) {
+        echo "Chegamos aqui..... - $nome - $categoria - $assunto - $mensagem";
 });
 
-//recebendo 2 parametro via URL
-Route::get('/contato/{nome}/{sobrenome}', function (string $nome, string $sobrenome) {
-    echo 'Chegamos aqui....'. $nome . $sobrenome;
+// Tornando parâmetro opcionais-> adicionando o sinal de '?' após o mesmo
+// e adicionar valor padrão dentro da função callback.
+//Se todos os parâmetros forem declarados como opcionais e tiverem valores padrões
+//teremos que passar os valores da direita para a esquerda na URL.
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem?}', function (
+    string $nome,
+    string $categoria,
+    string $assunto,
+    string $mensagem = ''
+) {
+    echo "Chegamos aqui..... - $nome - $categoria - $assunto - $mensagem";
 });
