@@ -38,3 +38,8 @@ Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem?}', function (
 ) {
     echo "Chegamos aqui..... - $nome - $categoria - $assunto - $mensagem";
 });
+
+//Aplicando expressões regulares para tratamento dos parâmetros das rotas.
+Route::get('/contato/{nome}/{categoria_id}/', function (string $nome, int $categoria_id = 1) {
+    echo "Chegamos aqui..... - $nome - $categoria_id";
+})->where('categoria_id', '[0-9]+');
