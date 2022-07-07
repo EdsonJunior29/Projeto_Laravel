@@ -22,7 +22,15 @@ Route::get('/sobre-nos', [SobrenosController::class, 'index']);
 
 Route::get('/contato', [ContatoController::class, 'index']);
 
-Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (string $nome, string $categoria, string $assunto, string $mensagem) {
+Route::get('/login', function () {
+    return 'login';
+});
+
+
+
+/*
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (
+    string $nome, string $categoria, string $assunto, string $mensagem) {
         echo "Chegamos aqui..... - $nome - $categoria - $assunto - $mensagem";
 });
 
@@ -43,3 +51,4 @@ Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem?}', function (
 Route::get('/contato/{nome}/{categoria_id}/', function (string $nome, int $categoria_id = 1) {
     echo "Chegamos aqui..... - $nome - $categoria_id";
 })->where('nome', '[A-Za-z]+')->where('categoria_id', '[0-9]+');
+*/
