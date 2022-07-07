@@ -26,7 +26,20 @@ Route::get('/login', function () {
     return 'login';
 });
 
+Route::prefix('/app')->group(function () {
 
+    Route::get('/clientes', function () {
+        return 'clientes';
+    });
+
+    Route::get('/fornecedores', function () {
+        return 'fornecedores';
+    });
+
+    Route::get('/produtos', function () {
+        return 'produtos';
+    });
+});
 
 /*
 Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (
