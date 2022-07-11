@@ -48,7 +48,6 @@ Route::fallback(function () {
     echo 'Rota acessada não foi encontrada. <a href="/"> Clique aqui </a> para voltar para a página inicial';
 });
 
-
 Route::get('/rotatest/{p1}/{p2}', [TestController::class, 'test']);
 
 //primeiro tipo de Redirecionamento de rotas.
