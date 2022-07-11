@@ -24,7 +24,7 @@ Route::get('/contato', [ContatoController::class, 'index']);
 
 Route::get('/login', function () {
     return 'login';
-})->name('login');
+});
 
 Route::prefix('/app')->group(function () {
 
@@ -40,3 +40,14 @@ Route::prefix('/app')->group(function () {
         return 'produtos';
     });
 });
+
+Route::get('/rota1', function () {
+    echo 'rota 1';
+})->name('site.rota1');
+
+//primeiro tipo de Redirecionamento de rotas.
+//Route::redirect('/rota2', '/rota1');
+
+Route::get('/rota2', function () {
+    return redirect()->route('site.rota1'); //Segunda forma de criar um redirecionamento de rota
+})->name('site.rota2');
