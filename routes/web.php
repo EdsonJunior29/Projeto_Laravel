@@ -51,3 +51,9 @@ Route::get('/rota1', function () {
 Route::get('/rota2', function () {
     return redirect()->route('site.rota1'); //Segunda forma de criar um redirecionamento de rota
 })->name('site.rota2');
+
+//Rota de Contigência(Fallback) -> E uma rota que será disponibilizada para o Usuário,
+//Caso a rota acessada não seja localizada. Dentro do sistema de rotas da aplicação.
+Route::fallback(function () {
+    echo 'Rota acessada não foi encontrada. <a href="/"> Clique aqui </a> para voltar para a página inicial';
+});
