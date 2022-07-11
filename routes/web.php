@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\SobrenosController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,19 +42,20 @@ Route::prefix('/app')->group(function () {
     });
 });
 
-Route::get('/rota1', function () {
-    echo 'rota 1';
-})->name('site.rota1');
-
-//primeiro tipo de Redirecionamento de rotas.
-//Route::redirect('/rota2', '/rota1');
-
-Route::get('/rota2', function () {
-    return redirect()->route('site.rota1'); //Segunda forma de criar um redirecionamento de rota
-})->name('site.rota2');
-
 //Rota de Contigência(Fallback) -> E uma rota que será disponibilizada para o Usuário,
 //Caso a rota acessada não seja localizada. Dentro do sistema de rotas da aplicação.
 Route::fallback(function () {
     echo 'Rota acessada não foi encontrada. <a href="/"> Clique aqui </a> para voltar para a página inicial';
 });
+
+
+Route::get('/rotatest/{p1}/{p2}', [TestController::class, 'test']);
+
+//primeiro tipo de Redirecionamento de rotas.
+//Route::redirect('/rota2', '/rota1');
+
+/*
+Route::get('/rota2', function () {
+    return redirect()->route('site.rota1'); //Segunda forma de criar um redirecionamento de rota
+})->name('site.rota2');
+*/
