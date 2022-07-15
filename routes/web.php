@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\SobrenosController;
 use App\Http\Controllers\TestController;
@@ -33,9 +34,7 @@ Route::prefix('/app')->group(function () {
         return 'clientes';
     });
 
-    Route::get('/fornecedores', function () {
-        return 'fornecedores';
-    });
+    Route::get('/fornecedores', [FornecedorController::class, 'index']);
 
     Route::get('/produtos', function () {
         return 'produtos';
