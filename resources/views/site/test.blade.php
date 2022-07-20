@@ -59,3 +59,31 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 @unless ($variavelTesteIfElse[0]['status'] == 'S')
     Fornecedor inativo unless.
 @endunless
+
+<br>
+{{-- Trabalhando com isset--}}
+{{-- Operador que verifica se uma varável ou indices de arrays estão definidos(existe ou não). --}}
+{{-- O isset e um método nativo do php --}}
+{{--ex:. if(isset($variavelTesteIfElse))-> retorna true se a variável existir. --}}
+<br>
+@isset($variavelTesteIfElse)
+    Fornecedor: {{ $variavelTesteIfElse[0]['nome']}}
+    <br>
+    Status: {{ $variavelTesteIfElse[0]['status']}}
+    <br>
+    CNPJ:  {{ $variavelTesteIfElse[0]['CNPJ']}}
+@endisset
+<br>
+<br>
+@isset($variavelTesteIfElse)
+    Fornecedor: {{ $variavelTesteIfElse[1]['nome']}}
+    <br>
+    Status: {{ $variavelTesteIfElse[1]['status']}}
+
+    @isset($variavelTesteIfElse[1]['CNPJ'])
+        CNPJ:  {{ $variavelTesteIfElse[1]['CNPJ']}}
+    @endisset()
+
+@endisset
+
+

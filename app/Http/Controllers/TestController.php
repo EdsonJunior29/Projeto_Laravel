@@ -9,7 +9,15 @@ class TestController extends Controller
     public function test(int $p1, int $p2)
     {
         $variavelTesteIfElse = [
-            0 => ['nome' => 'Fornecedor 1', 'status' => 'N']
+            0 => [
+                'nome'   => 'Fornecedor 1',
+                'status' => 'N',
+                'CNPJ'   => '12.258.000/0001-56'
+            ],
+            1 => [
+                'nome'   => 'Fornecedor 2',
+                'status' => 'S'
+                ]
         ];
         //echo "A soma de $p1 e $p2 é: ".($p1 + $p2);
         //return view('site.test', ['p1' => $p1, 'p2' => $p2]);Encaminhando valores recebidos como parâmetro para a view(Array associativo)
