@@ -33,3 +33,29 @@
 @else
     <h3>Ainda não existe Fornecedores cadastrados.</h3>
 @endif
+
+{{-- Operador de decisão unless --}}
+{{-- Equanto o if verifica retorno positivo, o unless verifica o retorno negativo --}}
+
+{{-- @dd($variavelTesteIfElse); --}}
+
+Fornecedor: {{ $variavelTesteIfElse[0]['nome']}}
+<br>
+Status: {{ $variavelTesteIfElse[0]['status']}}
+<br>
+
+@if ($variavelTesteIfElse[0]['status'] == 'N')
+    Fornecedor inativo
+@endif
+
+<br>
+{{-- Invertendo o resultado com o if --}}
+@if ( !($variavelTesteIfElse[0]['status'] == 'S'))
+    Fornecedor inativo
+@endif
+
+<br>
+{{-- Executa se o retorno da codição for false. --}}
+@unless ($variavelTesteIfElse[0]['status'] == 'S')
+    Fornecedor inativo unless.
+@endunless
