@@ -99,3 +99,6 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
     Contem valores
 @endempty
 
+{{-- Operador condicional ternário --}}
+{{-- esso operador não está relacionado com a sintaxe blade. O mesmo é php puro --}}
+{{-- Só poderá ser utilizado nos scripts do PHP puro--}}
