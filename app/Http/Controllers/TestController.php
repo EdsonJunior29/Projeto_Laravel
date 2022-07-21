@@ -21,10 +21,14 @@ class TestController extends Controller
             2 => [
                 'nome'   => 'Fornecedor 3',
                 'status' => 'S',
-                'CNPJ' => ''
+                'CNPJ' => '15.258.522/0001-54'
                 ]
         ];
-
+        /*
+        Operador condicional ternário
+        esso operador não está relacionado com a sintaxe blade. O mesmo é php puro
+        Só poderá ser utilizado nos scripts do PHP puro
+        */
         $msg = isset($variavelTesteIfElse[1]['CNPJ']) ? 'CNPJ informado' : 'CNPJ não informado ';
         echo $msg;
 

@@ -99,6 +99,22 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
     Contem valores
 @endempty
 
-{{-- Operador condicional ternário --}}
-{{-- esso operador não está relacionado com a sintaxe blade. O mesmo é php puro --}}
-{{-- Só poderá ser utilizado nos scripts do PHP puro--}}
+{{-- trabalhando com valor default no blade. sintaxe ?? --}}
+@isset($variavelTesteIfElse)
+    Fornecedor: {{ $variavelTesteIfElse[1]['nome']}}
+    <br>
+    Status: {{ $variavelTesteIfElse[1]['status']}}
+    <br>
+    <br>
+    <!-- Se a variável não está definida (isset)
+        se a variável estiver null
+        Utilizamos a sintaxe default
+    -->
+    CNPJ:  {{ $variavelTesteIfElse[0]['CNPJ'] ?? 'Dado não foi preenchido'}}
+    <br>
+    <br>
+    CNPJ:  {{ $variavelTesteIfElse[1]['CNPJ'] ?? 'Dado não foi preenchido'}}
+    <br>
+    <br>
+    CNPJ:  {{ $variavelTesteIfElse[2]['CNPJ'] ?? 'Dado não foi preenchido'}}
+@endisset
