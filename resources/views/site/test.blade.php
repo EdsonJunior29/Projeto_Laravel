@@ -118,3 +118,35 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
     <br>
     CNPJ:  {{ $variavelTesteIfElse[2]['CNPJ'] ?? 'Dado não foi preenchido'}}
 @endisset
+
+{{-- utilizando o switch / case no blade.php --}}
+
+<br>
+<br>
+@isset($variavelTesteIfElse)
+    Fornecedor: {{ $variavelTesteIfElse[0]['nome']}}
+    <br>
+    Status: {{ $variavelTesteIfElse[0]['status']}}
+    <br>
+    CNPJ:  {{ $variavelTesteIfElse[0]['CNPJ']}}
+    <br>
+    DDD: {{ $variavelTesteIfElse[0]['DDD'] ?? ''}}
+    <br>
+    Telefone: {{ $variavelTesteIfElse[0]['Telefone'] ?? ''}}
+    <br>
+    <br>
+    @switch($variavelTesteIfElse[0]['DDD'])
+        @case('11')
+            São Paulo -SP
+            @break
+        @case('21')
+            Rio de Janeiro - RJ
+            @break
+        @case('32')
+            Juiz de Fora - MG
+            @break
+        @default
+            Estado não identificado
+    @endswitch
+
+@endisset

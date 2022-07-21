@@ -12,16 +12,22 @@ class TestController extends Controller
             0 => [
                 'nome'   => 'Fornecedor 1',
                 'status' => 'N',
-                'CNPJ'   => '12.258.000/0001-56'
+                'CNPJ'   => '12.258.000/0001-56',
+                'DDD'    => '11',
+                'Telefone' => '2548-5879'
             ],
             1 => [
                 'nome'   => 'Fornecedor 2',
-                'status' => 'S'
+                'status' => 'S',
+                'DDD'    => '21',
+                'Telefone' => '2548-52547'
             ],
             2 => [
                 'nome'   => 'Fornecedor 3',
                 'status' => 'S',
-                'CNPJ' => '15.258.522/0001-54'
+                'CNPJ' => '15.258.522/0001-54',
+                'DDD'    => '32',
+                'Telefone' => '2547-5369'
                 ]
         ];
         /*
