@@ -150,3 +150,26 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
     @endswitch
 
 @endisset
+
+<br>
+<br>
+
+{{-- Utilizando o operador for na sintaxe blade--}}
+
+@isset($variavelTesteIfElse)
+    @for ($i = 0; isset($variavelTesteIfElse[$i]); $i++)
+        Fornecedor: {{ $variavelTesteIfElse[$i]['nome']}}
+        <br>
+        Status: {{ $variavelTesteIfElse[$i]['status']}}
+        <br>
+        CNPJ:  {{ $variavelTesteIfElse[$i]['CNPJ'] ?? ''}}
+        <br>
+        DDD: {{ $variavelTesteIfElse[$i]['DDD'] ?? ''}}
+        <br>
+        Telefone: {{ $variavelTesteIfElse[$i]['Telefone'] ?? ''}}
+
+        <hr>
+    @endfor
+
+@endisset
+
