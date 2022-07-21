@@ -17,6 +17,11 @@ class TestController extends Controller
             1 => [
                 'nome'   => 'Fornecedor 2',
                 'status' => 'S'
+            ],
+            2 => [
+                'nome'   => 'Fornecedor 3',
+                'status' => 'S',
+                'CNPJ' => ''
                 ]
         ];
         //echo "A soma de $p1 e $p2 é: ".($p1 + $p2);

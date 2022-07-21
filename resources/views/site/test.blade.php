@@ -86,4 +86,16 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 
 @endisset
 
+{{-- Utilizando o operador empty--}}
+{{-- Operador empty verifica se uma variável ou um índice de um array está vazio --}}
+{{-- O empty no php puro e utilizado dentro do bloco if-else --}}
+{{-- o empty retorna true se a variável estiver vazia e so é renderizado no browser quando está vazia. --}}
+
+@empty($variavelTesteIfElse[2]['CNPJ'])
+    Vazio
+@endempty
+
+@empty($variavelTesteIfElse[0]['CNPJ'])
+    Contem valores
+@endempty
 
