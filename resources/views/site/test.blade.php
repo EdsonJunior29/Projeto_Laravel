@@ -199,3 +199,24 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 
 @endisset
 
+{{-- Foraech na sintaxe blade--}}
+
+
+@isset($variavelTesteIfElse)
+
+    Teste foreach
+    <br>
+    <br>
+    @foreach ($variavelTesteIfElse as $indice => $fornecedores)
+        Fornecedor: {{ $fornecedores['nome']}}
+        <br>
+        Status: {{ $fornecedores['status']}}
+        <br>
+        CNPJ:  {{ $fornecedores['CNPJ'] ?? ''}}
+        <br>
+        DDD: {{ $fornecedores['DDD'] ?? ''}}
+        <br>
+        Telefone: {{ $fornecedores['Telefone'] ?? ''}}
+        <hr>
+    @endforeach
+@endisset
