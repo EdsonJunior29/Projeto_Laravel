@@ -173,3 +173,29 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 
 @endisset
 
+{{-- trabalahando com o while na sintaxe blade--}}
+
+@isset($variavelTesteIfElse)
+
+    Teste while
+    <br>
+    <br>
+    @php $i = 0 @endphp
+    @while (isset($variavelTesteIfElse[$i]))
+        Fornecedor: {{ $variavelTesteIfElse[$i]['nome']}}
+        <br>
+        Status: {{ $variavelTesteIfElse[$i]['status']}}
+        <br>
+        CNPJ:  {{ $variavelTesteIfElse[$i]['CNPJ'] ?? ''}}
+        <br>
+        DDD: {{ $variavelTesteIfElse[$i]['DDD'] ?? ''}}
+        <br>
+        Telefone: {{ $variavelTesteIfElse[$i]['Telefone'] ?? ''}}
+        @php
+            $i++
+        @endphp
+        <hr>
+    @endwhile
+
+@endisset
+
