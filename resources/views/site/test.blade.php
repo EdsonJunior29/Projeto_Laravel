@@ -232,6 +232,12 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
     <br>
     <br>
     @forelse ( $variavelTesteIfElse as $indice => $fornecedores )
+
+        {{-- Objeto loop só existe no foreach e forelse--}}
+
+        Iteração atual: {{ $loop->iteration}}
+        <br>
+        <br>
         Fornecedor: {{ $fornecedores['nome']}}
         <br>
         Status: {{ $fornecedores['status']}}
@@ -241,6 +247,19 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
         DDD: {{ $fornecedores['DDD'] ?? ''}}
         <br>
         Telefone: {{ $fornecedores['Telefone'] ?? ''}}
+
+        <br>
+        <br>
+        @if($loop->first)
+            Se for a primeira iteração do lopp o atributo first retorna true.
+        @endif
+
+        <br><br>
+        @if($loop->last)
+            última iteração do loop. Retorna True.
+            <br>
+            Total de registros : {{ $loop->count }}
+        @endif
         <hr>
     @empty
         Array vazio
