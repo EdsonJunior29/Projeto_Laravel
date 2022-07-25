@@ -265,3 +265,8 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
         Array vazio
     @endforelse
 @endisset
+
+{{-- Assert para aplicação web(frontEnd) --}}
+{{-- São arquivo que complementam o frontend da aplicação. Ex. imagem, som, vídeos etc.. --}}
+{{-- Tudo aquilo que complementa uma págia HTML. São considerado assert's' --}}
+{{-- Todos os assert's precisam está na pasta public da aplicação.' --}}
