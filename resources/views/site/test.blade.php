@@ -220,3 +220,29 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
         <hr>
     @endforeach
 @endisset
+
+{{-- forelse só existe na sintaxe blade.--}}
+{{-- Ele e uma combinação do foreach e um comando condicional. --}}
+{{-- O mesmo verifica se o array está ou não vazio. --}}
+{{-- Se houver itens no array o bloco e executado. Se não o fluxo é desviado--}}
+
+@isset($variavelTesteIfElse)
+
+    Teste forelse
+    <br>
+    <br>
+    @forelse ( $variavelTesteIfElse as $indice => $fornecedores )
+        Fornecedor: {{ $fornecedores['nome']}}
+        <br>
+        Status: {{ $fornecedores['status']}}
+        <br>
+        CNPJ:  {{ $fornecedores['CNPJ'] ?? ''}}
+        <br>
+        DDD: {{ $fornecedores['DDD'] ?? ''}}
+        <br>
+        Telefone: {{ $fornecedores['Telefone'] ?? ''}}
+        <hr>
+    @empty
+        Array vazio
+    @endforelse
+@endisset
