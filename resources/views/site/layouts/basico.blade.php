@@ -8,7 +8,5 @@
 
     <body>
         @yield('body')
-        @yield('conteudo_sobre_nos')
-        @yield('conteudo_contato')
     </body>
 </html>
