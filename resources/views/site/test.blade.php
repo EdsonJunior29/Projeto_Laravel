@@ -270,3 +270,13 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 {{-- São arquivo que complementam o frontend da aplicação. Ex. imagem, som, vídeos etc.. --}}
 {{-- Tudo aquilo que complementa uma págia HTML. São considerado assert's' --}}
 {{-- Todos os assert's precisam está na pasta public da aplicação.' --}}
+
+{{-- Trabalhar com templates no blades --}}
+{{-- Templates são modelos que servem como base para a criação de algo. (views)--}}
+{{-- Template é uma view com passagens de parâmentros e associações --}}
+{{-- Na view que vai receber um template utilizamos a função @extends--}}
+
+{{-- Direcionando o conteúdo para áreas específicas na view --}}
+{{-- Utilizamos a função @section e finalizamos com o @endsection obs: a section precisa de ter um nome --}}
+
+{{-- @yield() é uma função que recebe o bloque que será anexado no layouts --}}

@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Super Gestão - Sobre Nós</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{{asset('css/estilo_basico.css')}}">
-    </head>
+@extends('site.layouts.basico')
 
-    <body>
-        <div class="topo">
+@section('body')
+<div class="topo">
 
-            <div class="logo">
-                <img src="{{ asset('img/logo.png') }}">
-            </div>
+    <div class="logo">
+        <img src="{{ asset('img/logo.png') }}">
+    </div>
 
-            <div class="menu">
-                <ul>
-                    <li> <a href="/">HOME</a> </li>
-                    <li> <a href="/sobre-nos">SOBRE-NÓS</a> </li>
-                    <li> <a href="/contato">CONTATOS</a> </li>
-                </ul>
-            </div>
-        </div>
+    <div class="menu">
+        <ul>
+            <li> <a href="/">HOME</a> </li>
+            <li> <a href="/sobre-nos">SOBRE-NÓS</a> </li>
+            <li> <a href="/contato">CONTATOS</a> </li>
+        </ul>
+    </div>
+</div>
 
         <div class="conteudo-destaque">
 
@@ -68,5 +62,4 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+@endsection
