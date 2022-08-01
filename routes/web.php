@@ -23,6 +23,7 @@ Route::get('/', [PrincipalController::class, 'index'])->name('home');
 Route::get('/sobre-nos', [SobrenosController::class, 'index']);
 
 Route::get('/contato', [ContatoController::class, 'index']);
+Route::post('/contato', [ContatoController::class, 'index']);
 
 Route::get('/login', function () {
     return 'login';
