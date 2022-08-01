@@ -278,6 +278,6 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 
 {{-- Direcionando o conteúdo para áreas específicas na view --}}
 {{-- Utilizamos a função @section e finalizamos com o @endsection obs: a section precisa de ter um nome --}}
-{{-- Além de envio do html o section também permite envios de parâmetros. --}}
+{{-- Além de envio do html o section também permite envios de parâmetros e varíaveis para o controlador. --}}
 
 {{-- @yield() é uma função que recebe o bloque que será anexado no layouts --}}
