@@ -281,3 +281,6 @@ Status: {{ $variavelTesteIfElse[0]['status']}}
 {{-- Além de envio do html o section também permite envios de parâmetros e varíaveis para o controlador. --}}
 
 {{-- @yield() é uma função que recebe o bloque que será anexado no layouts --}}
+
+{{-- @component realiza a inclusão de uma view dentro de outra view--}}
+{{-- Se assemelha com o include. --}}
